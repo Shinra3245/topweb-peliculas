@@ -1,0 +1,1 @@
+Repositorio exclusivo de la práctica Películas. No leer, imprimir, copiar ni delegar .env ni credenciales. Conservar otros proyectos y contenedores. Los agentes delegados no deben ejecutar commits, push ni recursos externos; Codex integra y publica. No simular OAuth, Supabase ni datos importados.
