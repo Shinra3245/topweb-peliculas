@@ -1,0 +1,11 @@
+
+> practica-peliculas@1.0.0 import
+> node --env-file=.env scripts/import-tmdb.mjs --reuse-selection
+
+Se reutilizó la selección original para verificar la actualización sin duplicados.
+Detalles e imágenes procesados: 20/98
+Detalles e imágenes procesados: 40/98
+Detalles e imágenes procesados: 60/98
+Detalles e imágenes procesados: 80/98
+Detalles e imágenes procesados: 98/98
+Carga transaccional terminada y verificada: {"importadas":98,"persistidas":98,"posters":98,"fondos":97}

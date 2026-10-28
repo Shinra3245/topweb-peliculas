@@ -1,0 +1,2 @@
+DO
+Rollback transaccional comprobado: no quedaron registros de prueba

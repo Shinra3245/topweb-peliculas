@@ -1,0 +1,12 @@
+{
+  "peliculas": 98,
+  "generos": 17,
+  "relaciones": 258,
+  "peliculas_duplicadas": 0,
+  "relaciones_huerfanas": 0,
+  "rls_peliculas": true,
+  "anon_puede_leer": false,
+  "autenticado_puede_leer": true,
+  "autenticado_puede_insertar": false,
+  "autenticado_puede_importar": false
+}

@@ -1,0 +1,15 @@
+
+> practica-peliculas@1.0.0 import
+> node --env-file=.env scripts/import-tmdb.mjs
+
+Página pública descargada: 1 de 5
+Página pública descargada: 2 de 5
+Página pública descargada: 3 de 5
+Página pública descargada: 4 de 5
+Página pública descargada: 5 de 5
+Detalles e imágenes procesados: 20/98
+Detalles e imágenes procesados: 40/98
+Detalles e imágenes procesados: 60/98
+Detalles e imágenes procesados: 80/98
+Detalles e imágenes procesados: 98/98
+Carga transaccional terminada y verificada: {"importadas":98,"persistidas":98,"posters":98,"fondos":97}

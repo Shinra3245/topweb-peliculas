@@ -1,0 +1,43 @@
+project_id = "topweb_peliculas"
+[api]
+enabled = true
+port = 54361
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+[db]
+port = 54362
+shadow_port = 54360
+major_version = 17
+[db.pooler]
+enabled = false
+port = 54369
+pool_mode = "transaction"
+default_pool_size = 20
+max_client_conn = 100
+[studio]
+enabled = false
+port = 54363
+[inbucket]
+enabled = false
+port = 54364
+[storage]
+enabled = false
+[auth]
+enabled = true
+site_url = "http://localhost:4320"
+additional_redirect_urls = ["http://localhost:4320/auth/callback", "http://localhost:5320/auth/callback"]
+jwt_expiry = 3600
+enable_signup = true
+[auth.external.github]
+enabled = true
+client_id = "env(GITHUB_CLIENT_ID)"
+secret = "env(GITHUB_SECRET)"
+redirect_uri = "http://127.0.0.1:54361/auth/v1/callback"
+[analytics]
+enabled = false
+port = 54367
+[realtime]
+enabled = false
+[edge_runtime]
+enabled = false
