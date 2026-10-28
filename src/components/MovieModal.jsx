@@ -38,6 +38,12 @@ export function MovieModal({ movieId, session, onClose }) {
   // Manejar teclado (Escape para cerrar y navegación por foco)
   useEffect(() => {
     const handleKeyDown = (e) => {
+      if (e.key === 'Tab') {
+        const controls = backdropRef.current?.querySelectorAll('button:not([disabled]),a[href],input,[tabindex="0"]');
+        const first = controls?.[0]; const last = controls?.[controls.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
+        if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
+      }
       if (e.key === 'Escape') {
         e.preventDefault();
         onClose();

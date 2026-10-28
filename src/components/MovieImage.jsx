@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 /**
  * Componente de imagen de película con carga diferida (lazy loading)
@@ -13,6 +13,7 @@ export function MovieImage({
   loading = 'lazy'
 }) {
   const [hasError, setHasError] = useState(false);
+  useEffect(() => setHasError(false), [src]);
 
   // Si no hay fuente o falló la carga local, renderizar placeholder accesible
   if (!src || hasError) {

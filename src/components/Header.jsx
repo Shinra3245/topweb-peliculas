@@ -46,6 +46,7 @@ export function Header({
             </span>
             <input
               type="search"
+              maxLength={100}
               className="search-input"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}

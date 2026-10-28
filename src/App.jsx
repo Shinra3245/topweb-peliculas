@@ -138,12 +138,13 @@ export function App() {
     try {
       setIsAuthenticating(true);
       setAuthError(null);
-      await authClient.auth.signInWithOAuth({
+      const { error } = await authClient.auth.signInWithOAuth({
         provider: 'github',
         options: {
           redirectTo: window.location.origin + '/auth/callback'
         }
       });
+      if (error) throw error;
     } catch (err) {
       setAuthError(err?.message || 'No se pudo conectar con el proveedor de acceso GitHub.');
       setIsAuthenticating(false);
@@ -154,9 +155,11 @@ export function App() {
   const handleLogout = async () => {
     if (authClient?.auth) {
       try {
-        await authClient.auth.signOut({ scope: 'local' });
+        const { error } = await authClient.auth.signOut({ scope: 'local' });
+        if (error) throw error;
       } catch (err) {
-        console.error('Error en logout:', err);
+        setAuthError('No se pudo cerrar la sesión. Intenta de nuevo.');
+        return;
       }
     }
     setSession(null);
@@ -189,7 +192,7 @@ export function App() {
         <div className="state-container" style={{ margin: 'auto' }}>
           <div className="spinner" />
           <h2 className="state-title">Cartelera</h2>
-          <p className="state-message">Verificando credenciales de acceso...</p>
+          <p className="state-message">Abriendo Cartelera...</p>
         </div>
       </div>
     );
@@ -245,7 +248,7 @@ export function App() {
         )}
 
         {/* Destacado cinematográfico: solo página 1 sin búsqueda activa */}
-        {featuredMovie && !loadingMovies && (
+        {featuredMovie && !loadingMovies && !moviesError && (
           <HeroFeatured
             movie={featuredMovie}
             onSelect={(id) => setSelectedMovieId(id)}

@@ -97,7 +97,16 @@ El tamaño de página admite de 1 a 24 elementos. La búsqueda admite hasta 100 
 - Primera carga real: 98 películas, 17 géneros y 258 relaciones.
 - 98 pósteres y 97 fondos disponibles; se contempla la ausencia de imágenes.
 - Integridad de relaciones, permisos y reversión transaccional comprobados en PostgreSQL.
-- Validación de interfaz y OAuth: pendiente de integración final.
+- Dos importaciones reales de la misma selección mantuvieron 98 registros únicos.
+- OAuth GitHub real, persistencia de sesión, cierre y nuevo acceso comprobados.
+- Nueve páginas recorridas: 98 identificadores únicos, búsqueda por título y detalle con sinopsis, duración y géneros.
+- Modal abierto y cerrado 13 veces sin duplicación; foco por teclado y restauración comprobados.
+- Vistas de 320, 390, 768 y 1440 px; galería y modal sin desbordamiento horizontal.
+- Fallo 503 simulado en la red del navegador y recuperación con Reintentar.
+- Ningún error JavaScript y ninguna consulta de la interfaz a TMDB durante la prueba.
+- API real: respuestas 200, 400, 401 y 404 verificadas con la sesión OAuth.
+
+`evidencias/verificacion-e2e.json` conserva los resultados y distingue consultas reales del fallo de red simulado. La aplicación funciona localmente; no se realizó despliegue público.
 
 ```bash
 npm test

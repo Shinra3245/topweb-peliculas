@@ -3,29 +3,29 @@
 > node --test --test-timeout=10000 test/*.test.js
 
 ▶ API propia de Películas
-  ✔ informa disponibilidad sin credenciales privadas (38.396099ms)
-  ✔ entrega solo la configuración pública de Auth (3.432522ms)
-  ✔ rechaza solicitudes sin sesión (2.082693ms)
-  ✔ rechaza una sesión inválida (1.816157ms)
-  ✔ rechaza parámetros inválidos: page=0 (2.871529ms)
-  ✔ rechaza parámetros inválidos: page=-1 (1.636062ms)
-  ✔ rechaza parámetros inválidos: page=1.5 (1.53247ms)
-  ✔ rechaza parámetros inválidos: page=texto (1.518503ms)
-  ✔ rechaza parámetros inválidos: page=1&page=2 (1.92034ms)
-  ✔ rechaza parámetros inválidos: pageSize=0 (1.739585ms)
-  ✔ rechaza parámetros inválidos: pageSize=25 (1.12974ms)
-  ✔ rechaza parámetros inválidos: pageSize=texto (1.04356ms)
-  ✔ rechaza parámetros inválidos: page=9007199254740991&pageSize=24 (1.072243ms)
-  ✔ rechaza parámetros inválidos: q=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (0.974081ms)
-  ✔ mantiene el contrato de paginación y transmite la sesión al servicio (1.311428ms)
-  ✔ representa una búsqueda vacía correctamente (1.402527ms)
-  ✔ entrega el detalle y sus géneros (1.474431ms)
-  ✔ responde 404 para una película inexistente (1.257448ms)
-  ✔ rechaza identificadores inválidos (0.962049ms)
-  ✔ responde en JSON ante una ruta API inexistente (1.175275ms)
-  ✔ no convierte una imagen ausente en una página HTML (2.337507ms)
-  ✔ maneja fallos del servicio sin exponer detalles internos (3.961545ms)
-✔ API propia de Películas (85.21584ms)
+  ✔ informa disponibilidad sin credenciales privadas (38.058522ms)
+  ✔ entrega solo la configuración pública de Auth (3.373883ms)
+  ✔ rechaza solicitudes sin sesión (2.311758ms)
+  ✔ rechaza una sesión inválida (1.923466ms)
+  ✔ rechaza parámetros inválidos: page=0 (2.817699ms)
+  ✔ rechaza parámetros inválidos: page=-1 (1.791231ms)
+  ✔ rechaza parámetros inválidos: page=1.5 (1.712103ms)
+  ✔ rechaza parámetros inválidos: page=texto (1.767677ms)
+  ✔ rechaza parámetros inválidos: page=1&page=2 (2.160106ms)
+  ✔ rechaza parámetros inválidos: pageSize=0 (2.118148ms)
+  ✔ rechaza parámetros inválidos: pageSize=25 (1.497173ms)
+  ✔ rechaza parámetros inválidos: pageSize=texto (1.13473ms)
+  ✔ rechaza parámetros inválidos: page=9007199254740991&pageSize=24 (1.120243ms)
+  ✔ rechaza parámetros inválidos: q=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa (1.051725ms)
+  ✔ mantiene el contrato de paginación y transmite la sesión al servicio (1.393732ms)
+  ✔ representa una búsqueda vacía correctamente (1.062015ms)
+  ✔ entrega el detalle y sus géneros (1.295329ms)
+  ✔ responde 404 para una película inexistente (1.155579ms)
+  ✔ rechaza identificadores inválidos (0.948945ms)
+  ✔ responde en JSON ante una ruta API inexistente (1.173061ms)
+  ✔ no convierte una imagen ausente en una página HTML (2.164384ms)
+  ✔ maneja fallos del servicio sin exponer detalles internos (3.870786ms)
+✔ API propia de Películas (85.874575ms)
 ℹ tests 22
 ℹ suites 1
 ℹ pass 22
@@ -33,4 +33,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 229.091134
+ℹ duration_ms 251.257992

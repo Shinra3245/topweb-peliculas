@@ -51,7 +51,7 @@ export function LoginHero({ onLogin, authError, onDismissError, isAuthenticating
             <span>{isAuthenticating ? 'Conectando...' : 'Iniciar sesión con GitHub'}</span>
           </button>
           <span className="login-security-note">
-            Acceso seguro mediante OAuth. No se solicitan contraseñas privadas.
+            Entra con tu cuenta de GitHub para explorar el catálogo.
           </span>
         </div>
 
